@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0; 
+}
+
+.flex-top {
+    display: flex;
+    background-color: rgb(25, 26, 27);
+    justify-content: center;
+    place-items: center;
+}
+
+.flex-top > h1 {
+    color: aliceblue;
+    justify-content: center;
+    font-family: "Dancing Script";
+
+    /* this is for typing effect */
+    width: 11.5ch;
+    animation: typing 2s steps(19);
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 250%;
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+}
+
+.flex-nav{
+    background-color: rgb(25, 26, 27);
+    margin-top: 2px;
+    color: aliceblue;
+    font-family: "Arial";
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+

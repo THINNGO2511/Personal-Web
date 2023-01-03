@@ -4,23 +4,26 @@ body{
 }
 
 .flex-top {
-    display: flex;
+    display: grid;
     background-color: rgb(25, 26, 27);
-    justify-content: center;
     place-items: center;
 }
 
-.flex-top > h1 {
-    color: aliceblue;
-    justify-content: center;
-    font-family: "Dancing Script";
+.animated-tittle {
+  font-family: "Dancing Script";
+  font-size: 250%;
+  line-height: 250%;
+  
+  /* this is for typing effect */
+  width: 11.5ch;
+  animation: typing 2s steps(19);
+  white-space: nowrap;
+  overflow: hidden;
+}
 
-    /* this is for typing effect */
-    width: 11.5ch;
-    animation: typing 2s steps(19);
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 250%;
+.animated-tittle > a{
+  text-decoration: none;
+  color: aliceblue;
 }
 
 @keyframes typing {
@@ -31,13 +34,127 @@ body{
 
 .flex-nav{
     background-color: rgb(25, 26, 27);
-    margin-top: 2px;
-    color: aliceblue;
-    font-family: "Arial";
+    flex-direction: row;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+
+    margin-top: 2px;
+    margin-bottom: 2.5px;
+    line-height: 250%;
 }
 
+.flex-nav > a{
+    color: aliceblue;
+    font-family: "Times New Roman";
+    text-decoration: none;
 
+    font-size: 120%;
+    padding: 20px;
+}
 
+.flex-gallery{
+  display: flex;
+  flex-direction: row;
+}
+
+.image-div{
+  position: relative;
+  width: 50%;
+}
+
+.image{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image-div:hover .image {
+  opacity: 0.3;
+}
+
+.image-div:hover .middle {
+  opacity: 1;
+}
+
+.text{
+  text-decoration: none;
+  color: black;
+  font-size: 125%;
+  font-family: Domine;
+}
+
+.flex-website-description{
+  display: flex;
+  justify-content: center;
+
+  color: aliceblue;
+  background-color: rgb(25, 26, 27);
+  font-size: 120%;
+  line-height: 400%;
+}
+
+.flex-whitespace{
+  height: 50px;
+}
+
+.flex-quote{
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(63, 65, 68);
+  color: aliceblue;
+  font-family: "Chivo Mono";
+  font-size: 170%;
+}
+
+.flex-quote > p {
+  margin: 50px 50px;
+}
+
+.flex-lastdiv-container{
+  display: flex;
+  justify-content: center;
+}
+
+.flex-lastpic{
+  position: relative;
+  /* display: flex; */
+}
+
+.flex-lastpic:hover .image {
+  opacity: 0.3;
+}
+
+.flex-lastpic:hover .middle {
+  opacity: 1;
+}
+
+.footer-text{
+  color: aliceblue;
+  margin: 16px 16px;
+}
+
+.footer-text > a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.flex-footer{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(25, 26, 27);
+}
